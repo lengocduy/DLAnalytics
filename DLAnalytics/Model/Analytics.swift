@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+public enum Analytics {
+    /// Allow Client to send an event via.
+    public static func send(event: AnalyticsEvent) {
+        AnalyticsManager.sharedInstance.send(event: event)
+    }
+}

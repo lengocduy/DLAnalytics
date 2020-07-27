@@ -108,6 +108,7 @@ let package = Package(
         targets: [
             .target(
                     name: "TestDLAnalytics",
+                    path: ".",
                     dependencies: ["DLAnalytics"])
         ]
 )

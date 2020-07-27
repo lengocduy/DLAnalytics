@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+public protocol AnalyticsService {
+    func send(event: AnalyticsEvent)
+}

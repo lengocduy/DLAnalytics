@@ -1,0 +1,65 @@
+disabled_rules: # rule identifiers to exclude from running
+  - control_statement
+  - todo
+  - trailing_whitespace
+  - force_cast
+opt_in_rules: # some rules are only opt-in
+  - empty_count
+  - function_default_parameter_at_end
+  - redundant_type_annotation
+  - closure_body_length
+  - closure_spacing
+  # Find all the available rules by running:
+  # swiftlint rules
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Carthage
+  - Pods
+  - Scripts
+analyzer_rules: # Rules run by `swiftlint analyze` (experimental)
+  - explicit_self
+
+# configurable rules can be customized from this configuration file
+# binary rules can set their severity level
+# force_cast: warning # implicitly
+force_try:
+  severity: error # explicitly
+# rules that have both warning and error levels, can set just the warning level
+# implicitly
+line_length: 150
+# they can set both implicitly with an array
+type_body_length:
+  - 300 # warning
+  - 400 # error
+# or they can set both explicitly
+file_length:
+  warning: 500
+  error: 1200
+function_body_length:
+  warning: 50
+  error: 80
+closure_body_length:
+  warning: 50
+  error: 75
+cyclomatic_complexity:
+  - 13 # warning
+  - 15 # error
+# naming rules can set warnings/errors for min_length and max_length
+# additionally they can set excluded names
+generic_type_name:
+    min_length: 1 # only warning
+    max_length: 30
+
+type_name:
+  min_length: 2 # only warning
+  max_length: # warning and error
+    warning: 80
+    error: 100
+  excluded: iPhone # excluded via string
+identifier_name:
+  min_length: # only min_length
+    warning: 2
+  excluded: # excluded via string array
+    - id
+    - URL
+    - GlobalAPIKey
+reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, junit, html, emoji, sonarqube, markdown)

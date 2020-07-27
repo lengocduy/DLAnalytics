@@ -1,0 +1,403 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D6C54E2E24CE0E3700BBFBF6 /* DLAnalytics.h in Headers */ = {isa = PBXBuildFile; fileRef = D6C54E2C24CE0E3700BBFBF6 /* DLAnalytics.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6C54E3524CE107700BBFBF6 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D6C54E3424CE107700BBFBF6 /* README.md */; };
+		D6C54E3B24CE15F200BBFBF6 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C54E3A24CE15F200BBFBF6 /* AnalyticsService.swift */; };
+		D6C54E3D24CE15FE00BBFBF6 /* AnalyticsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C54E3C24CE15FE00BBFBF6 /* AnalyticsEvent.swift */; };
+		D6C54E3F24CE161500BBFBF6 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C54E3E24CE161500BBFBF6 /* AnalyticsManager.swift */; };
+		D6C54E4124CE162300BBFBF6 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C54E4024CE162300BBFBF6 /* Analytics.swift */; };
+		D6C54E4324CE174900BBFBF6 /* ReadWriteLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C54E4224CE174900BBFBF6 /* ReadWriteLock.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D6C54E2924CE0E3700BBFBF6 /* DLAnalytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DLAnalytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6C54E2C24CE0E3700BBFBF6 /* DLAnalytics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAnalytics.h; sourceTree = "<group>"; };
+		D6C54E2D24CE0E3700BBFBF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6C54E3424CE107700BBFBF6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D6C54E3A24CE15F200BBFBF6 /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
+		D6C54E3C24CE15FE00BBFBF6 /* AnalyticsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvent.swift; sourceTree = "<group>"; };
+		D6C54E3E24CE161500BBFBF6 /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
+		D6C54E4024CE162300BBFBF6 /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
+		D6C54E4224CE174900BBFBF6 /* ReadWriteLock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadWriteLock.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D6C54E2624CE0E3700BBFBF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D6C54E1F24CE0E3700BBFBF6 = {
+			isa = PBXGroup;
+			children = (
+				D6C54E3424CE107700BBFBF6 /* README.md */,
+				D6C54E2B24CE0E3700BBFBF6 /* DLAnalytics */,
+				D6C54E2A24CE0E3700BBFBF6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D6C54E2A24CE0E3700BBFBF6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D6C54E2924CE0E3700BBFBF6 /* DLAnalytics.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D6C54E2B24CE0E3700BBFBF6 /* DLAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				D6C54E3924CE15CB00BBFBF6 /* Model */,
+				D6C54E3824CE15B600BBFBF6 /* Impl */,
+				D6C54E3724CE159D00BBFBF6 /* Protocol */,
+				D6C54E2C24CE0E3700BBFBF6 /* DLAnalytics.h */,
+				D6C54E2D24CE0E3700BBFBF6 /* Info.plist */,
+			);
+			path = DLAnalytics;
+			sourceTree = "<group>";
+		};
+		D6C54E3724CE159D00BBFBF6 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				D6C54E3A24CE15F200BBFBF6 /* AnalyticsService.swift */,
+				D6C54E3C24CE15FE00BBFBF6 /* AnalyticsEvent.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		D6C54E3824CE15B600BBFBF6 /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+				D6C54E3E24CE161500BBFBF6 /* AnalyticsManager.swift */,
+			);
+			path = Impl;
+			sourceTree = "<group>";
+		};
+		D6C54E3924CE15CB00BBFBF6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D6C54E4024CE162300BBFBF6 /* Analytics.swift */,
+				D6C54E4224CE174900BBFBF6 /* ReadWriteLock.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D6C54E2424CE0E3700BBFBF6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6C54E2E24CE0E3700BBFBF6 /* DLAnalytics.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D6C54E2824CE0E3700BBFBF6 /* DLAnalytics */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6C54E3124CE0E3700BBFBF6 /* Build configuration list for PBXNativeTarget "DLAnalytics" */;
+			buildPhases = (
+				D6C54E2424CE0E3700BBFBF6 /* Headers */,
+				D6C54E2524CE0E3700BBFBF6 /* Sources */,
+				D6C54E2624CE0E3700BBFBF6 /* Frameworks */,
+				D6C54E2724CE0E3700BBFBF6 /* Resources */,
+				D6C54E3624CE126E00BBFBF6 /* Run Swiftlint */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DLAnalytics;
+			productName = DLAnalytics;
+			productReference = D6C54E2924CE0E3700BBFBF6 /* DLAnalytics.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D6C54E2024CE0E3700BBFBF6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = askbills;
+				TargetAttributes = {
+					D6C54E2824CE0E3700BBFBF6 = {
+						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1140;
+					};
+				};
+			};
+			buildConfigurationList = D6C54E2324CE0E3700BBFBF6 /* Build configuration list for PBXProject "DLAnalytics" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D6C54E1F24CE0E3700BBFBF6;
+			productRefGroup = D6C54E2A24CE0E3700BBFBF6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D6C54E2824CE0E3700BBFBF6 /* DLAnalytics */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D6C54E2724CE0E3700BBFBF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6C54E3524CE107700BBFBF6 /* README.md in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D6C54E3624CE126E00BBFBF6 /* Run Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Swiftlint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D6C54E2524CE0E3700BBFBF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6C54E3F24CE161500BBFBF6 /* AnalyticsManager.swift in Sources */,
+				D6C54E3B24CE15F200BBFBF6 /* AnalyticsService.swift in Sources */,
+				D6C54E4124CE162300BBFBF6 /* Analytics.swift in Sources */,
+				D6C54E3D24CE15FE00BBFBF6 /* AnalyticsEvent.swift in Sources */,
+				D6C54E4324CE174900BBFBF6 /* ReadWriteLock.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D6C54E2F24CE0E3700BBFBF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D6C54E3024CE0E3700BBFBF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D6C54E3224CE0E3700BBFBF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DLAnalytics/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.askbills.DLAnalytics;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D6C54E3324CE0E3700BBFBF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DLAnalytics/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.askbills.DLAnalytics;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D6C54E2324CE0E3700BBFBF6 /* Build configuration list for PBXProject "DLAnalytics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6C54E2F24CE0E3700BBFBF6 /* Debug */,
+				D6C54E3024CE0E3700BBFBF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6C54E3124CE0E3700BBFBF6 /* Build configuration list for PBXNativeTarget "DLAnalytics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6C54E3224CE0E3700BBFBF6 /* Debug */,
+				D6C54E3324CE0E3700BBFBF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D6C54E2024CE0E3700BBFBF6 /* Project object */;
+}

@@ -26,13 +26,12 @@ jobs:
       run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
 
     - name: Select Xcode
-      run: sudo xcode-select -switch /Applications/Xcode_11.4.1.app
+      run: sudo xcode-select -switch /Applications/Xcode_12.4.app
       id: tool-select
-      
       
     - name: Xcode version
       run: /usr/bin/xcodebuild -version
       id: tool-version
 
     - name: Build
-      run: xcodebuild -scheme DLAnalytics clean build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=macOS" ONLY_ACTIVE_ARCH=YES
+      run: xcodebuild -scheme DLAnalytics clean build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator ONLY_ACTIVE_ARCH=YES

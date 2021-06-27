@@ -1,5 +1,17 @@
 # Changelog
 
+## [v1.1.0](https://github.com/lengocduy/DLAnalytics/tree/v1.1.0) (2021-06-27)
+
+[Full Changelog](https://github.com/lengocduy/DLAnalytics/compare/v1.0.0...v1.1.0)
+
+**Implemented enhancements:**
+
+- feat\(XCFramework\): support multi architecture [\#2](https://github.com/lengocduy/DLAnalytics/pull/2) ([lengocduy](https://github.com/lengocduy))
+
+**Merged pull requests:**
+
+- docs: update document guideline for new version 1.1.0 [\#3](https://github.com/lengocduy/DLAnalytics/pull/3) ([lengocduy](https://github.com/lengocduy))
+
 ## [v1.0.0](https://github.com/lengocduy/DLAnalytics/tree/v1.0.0) (2020-07-27)
 
 [Full Changelog](https://github.com/lengocduy/DLAnalytics/compare/e242309c7135636a2d1c29c1cbb8e5ad3bdf1829...v1.0.0)

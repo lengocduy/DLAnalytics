@@ -78,7 +78,7 @@ There are three ways to install `DLAnalytics`
 Just add to your project's `Podfile`:
 
 ```
-pod 'DLAnalytics', '~> 1.0'
+pod 'DLAnalytics', '~> 1.1'
 ```
 
 ### Carthage
@@ -86,8 +86,11 @@ pod 'DLAnalytics', '~> 1.0'
 Add following to `Cartfile`:
 
 ```
-github "lengocduy/DLAnalytics"
+github "lengocduy/DLAnalytics" ~> 1.1
 ```
+
+- To building platform-independent xcframeworks Xcode 12 and above [here](https://github.com/Carthage/Carthage#building-platform-independent-xcframeworks-xcode-12-and-above)
+- To migrating from framework bundles to xcframework [here](https://github.com/Carthage/Carthage#migrating-a-project-from-framework-bundles-to-xcframeworks)
 
 ### Swift Package Manager
 
@@ -102,7 +105,7 @@ let package = Package(
         name: "TestDLAnalytics",
 
         dependencies: [
-            .package(url: "https://github.com/lengocduy/DLAnalytics.git", from: "1.0.0"),
+            .package(url: "https://github.com/lengocduy/DLAnalytics.git", from: "1.1.0"),
         ],
 
         targets: [

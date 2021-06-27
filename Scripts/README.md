@@ -4,4 +4,4 @@
 3. `readable-markdown` helps to view `README.md` nicer.
 
 ## Prerequisite
-1. Xcode 11 and above
+1. Xcode 12 and above

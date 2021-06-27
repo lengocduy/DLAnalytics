@@ -15,7 +15,7 @@ An abstract Analytics Framework supports:
 
 ## Requirements
 
-- Xcode 11+
+- Xcode 12+
 - Swift 5.0+
 
 ## How

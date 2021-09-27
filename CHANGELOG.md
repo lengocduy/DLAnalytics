@@ -1,5 +1,13 @@
 # Changelog
 
+## [v2.0.0](https://github.com/lengocduy/DLAnalytics/tree/v2.0.0) (2021-09-27)
+
+[Full Changelog](https://github.com/lengocduy/DLAnalytics/compare/v1.1.0...v2.0.0)
+
+**Implemented enhancements:**
+
+- feat: support identify user and custom properties for tracking [\#6](https://github.com/lengocduy/DLAnalytics/pull/6) ([lengocduy](https://github.com/lengocduy))
+
 ## [v1.1.0](https://github.com/lengocduy/DLAnalytics/tree/v1.1.0) (2021-06-27)
 
 [Full Changelog](https://github.com/lengocduy/DLAnalytics/compare/v1.0.0...v1.1.0)

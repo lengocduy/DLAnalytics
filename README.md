@@ -26,15 +26,25 @@ An abstract Analytics Framework supports:
 
 ```
 class ClientAnalyticsImpl: AnalyticsService {
-    func send(event: AnalyticsEvent) {
-        print("TODO: Invoke your special API via SDK: name = \(event.name), payload = \(event.payload)")
-    }
+    func setUserIdentifyProperty(_ property: [String : String]) {
+		print("setUserIdentifyProperty: To support identify the user")
+	}
+	
+	func reset() {
+		print("reset: To reset all data related to the user e.g user logout")
+	}
+	
+	func send(event: AnalyticsEvent) {
+        // Here is the specific Analytics implementation e.g FireBaseAnalytics, MixPanel, etc.
+		print("### Send an event name: \(event.name), payload = \(event.payload)")
+	}
 }
 ```
 
 2. Declare your custom event.
 
 ```
+// MARK: - Support dynamic configurable payload for an event
 struct InputOTPEvent: AnalyticsEvent {
     private(set) var payload: [String: String]
     
@@ -42,13 +52,24 @@ struct InputOTPEvent: AnalyticsEvent {
         return "InputOTP"
     }
 
-    static func inputOTPWrong() -> InputOTPEvent {
-        return InputOTPEvent(payload: ["OTPInvalid": "1"])
-    }
-
     static func inputOTPSuccess() -> InputOTPEvent {
         return InputOTPEvent(payload: ["OTPValid": "1"])
     }
+}
+
+// MARK: - Enum support static configurable payload for an event
+@frozen
+enum CheckoutEvent: String, AnalyticsEvent {
+	case success = "Checkout_Success"
+	case error = "Checkout_Error"
+
+	internal var payload: [String: Any] {
+		return [:]
+	}
+	
+	var name: String {
+		return rawValue
+	}
 }
 ```
 
@@ -56,7 +77,7 @@ struct InputOTPEvent: AnalyticsEvent {
 
 ```
 let analyticsService = ClientAnalyticsImpl()
-AnalyticsManager.sharedInstance.addAnalyticsService(analyticsService)
+Analytics.registerAnalyticsService(analyticsService)
 ```
 
 ### Use
@@ -64,9 +85,11 @@ AnalyticsManager.sharedInstance.addAnalyticsService(analyticsService)
 ```
 /// Simulate tracking event InputOTP success
 Analytics.send(event: InputOTPEvent.inputOTPSuccess())
+Analytics.send(event: CheckoutEvent.success)
 
-/// Output: In your real implementation it is tracked on dashboard of specific Analytics (Ex: FireBaseAnalytics, MixPanel...)
-TODO: Invoke your special API via SDK: name = InputOTP, payload = ["OTPValid": "1"]
+/// Output:
+Send an event name: InputOTP, payload = ["OTPValid": "1"]
+Send an event name: Checkout_Success, payload = [:]
 ```
 
 ## Installation

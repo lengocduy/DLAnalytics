@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18ABFFB926FDADCC00B3EFDB /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ABFFB826FDADCC00B3EFDB /* Dictionary.swift */; };
 		D6C54E2E24CE0E3700BBFBF6 /* DLAnalytics.h in Headers */ = {isa = PBXBuildFile; fileRef = D6C54E2C24CE0E3700BBFBF6 /* DLAnalytics.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D6C54E3524CE107700BBFBF6 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D6C54E3424CE107700BBFBF6 /* README.md */; };
 		D6C54E3B24CE15F200BBFBF6 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C54E3A24CE15F200BBFBF6 /* AnalyticsService.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18ABFFB826FDADCC00B3EFDB /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		D6C54E2924CE0E3700BBFBF6 /* DLAnalytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DLAnalytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6C54E2C24CE0E3700BBFBF6 /* DLAnalytics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLAnalytics.h; sourceTree = "<group>"; };
 		D6C54E2D24CE0E3700BBFBF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -39,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18ABFFB726FDADA000B3EFDB /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				18ABFFB826FDADCC00B3EFDB /* Dictionary.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		D6C54E1F24CE0E3700BBFBF6 = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +69,7 @@
 		D6C54E2B24CE0E3700BBFBF6 /* DLAnalytics */ = {
 			isa = PBXGroup;
 			children = (
+				18ABFFB726FDADA000B3EFDB /* Extension */,
 				D6C54E3924CE15CB00BBFBF6 /* Model */,
 				D6C54E3824CE15B600BBFBF6 /* Impl */,
 				D6C54E3724CE159D00BBFBF6 /* Protocol */,
@@ -202,6 +213,7 @@
 				D6C54E4124CE162300BBFBF6 /* Analytics.swift in Sources */,
 				D6C54E3D24CE15FE00BBFBF6 /* AnalyticsEvent.swift in Sources */,
 				D6C54E4324CE174900BBFBF6 /* ReadWriteLock.swift in Sources */,
+				18ABFFB926FDADCC00B3EFDB /* Dictionary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,15 +30,15 @@ class ClientAnalyticsImpl: AnalyticsService {
     var allowEvents: Set<String> {
 		Set<String>(arrayLiteral: "\(InputOTPEvent.self)", "\(CheckoutEvent.self)")
 	}
-
+    
     func setUserIdentifyProperty(_ property: [String : String]) {
 		// To support identify the user"
 	}
-	
-	func reset() {
+    
+    func reset() {
 		// reset all data related to the user e.g user logout"
 	}
-	
+
 	func send(event: AnalyticsEvent) {
         // Specific Analytics implementation e.g FireBaseAnalytics, MixPanel, etc.
 		print("### Send an event name: \(event.name), payload = \(event.payload)")
@@ -69,16 +69,16 @@ struct InputOTPEvent: AnalyticsEvent {
 // MARK: - Enum support static configurable payload for an event
 @frozen
 enum CheckoutEvent: String, AnalyticsEvent {
-	case success = "Checkout_Success"
-	case error = "Checkout_Error"
+    case success = "Checkout_Success"
+    case error = "Checkout_Error"
 
-	internal var payload: [String: Any] {
-		return [:]
-	}
-	
-	var name: String {
-		return rawValue
-	}
+    internal var payload: [String: Any] {
+        return [:]
+    }
+
+    var name: String {
+        return rawValue
+    }
 }
 ```
 
@@ -110,7 +110,7 @@ There are three ways to install `DLAnalytics`
 Just add to your project's `Podfile`:
 
 ```
-pod 'DLAnalytics', '~> 2.0'
+pod 'DLAnalytics', '~> 2.1'
 ```
 
 ### Carthage
@@ -118,7 +118,7 @@ pod 'DLAnalytics', '~> 2.0'
 Add following to `Cartfile`:
 
 ```
-github "lengocduy/DLAnalytics" ~> 2.0
+github "lengocduy/DLAnalytics" ~> 2.1
 ```
 
 - To building platform-independent xcframeworks Xcode 12 and above [here](https://github.com/Carthage/Carthage#building-platform-independent-xcframeworks-xcode-12-and-above)
@@ -137,7 +137,7 @@ let package = Package(
         name: "TestDLAnalytics",
 
         dependencies: [
-            .package(url: "https://github.com/lengocduy/DLAnalytics.git", from: "2.0.0"),
+            .package(url: "https://github.com/lengocduy/DLAnalytics.git", from: "2.1.0"),
         ],
 
         targets: [

@@ -1,5 +1,22 @@
 # Changelog
 
+## [v2.1.0](https://github.com/lengocduy/DLAnalytics/tree/v2.1.0) (2021-09-29)
+
+[Full Changelog](https://github.com/lengocduy/DLAnalytics/compare/v2.0.0...v2.1.0)
+
+**Implemented enhancements:**
+
+- feat: allow client register whitelist event to handle [\#8](https://github.com/lengocduy/DLAnalytics/pull/8) ([lengocduy](https://github.com/lengocduy))
+
+**Closed issues:**
+
+- Should change payload to \[String : Any\]  [\#5](https://github.com/lengocduy/DLAnalytics/issues/5)
+- Support Analytics.setUserID [\#4](https://github.com/lengocduy/DLAnalytics/issues/4)
+
+**Merged pull requests:**
+
+- docs: update document guideline for new version 2.0.0 [\#7](https://github.com/lengocduy/DLAnalytics/pull/7) ([lengocduy](https://github.com/lengocduy))
+
 ## [v2.0.0](https://github.com/lengocduy/DLAnalytics/tree/v2.0.0) (2021-09-27)
 
 [Full Changelog](https://github.com/lengocduy/DLAnalytics/compare/v1.1.0...v2.0.0)

@@ -33,4 +33,9 @@ public enum Analytics {
 	public static func reset() {
 		AnalyticsManager.sharedInstance.reset()
 	}
+	
+	/// Support some cases want to track from or present some screens inside specific consumer (Analytics services)
+	public static func send(event: AnalyticsEvent, from viewController: ViewController) {
+		AnalyticsManager.sharedInstance.send(event: event, from: viewController)
+	}
 }

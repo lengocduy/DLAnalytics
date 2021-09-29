@@ -38,6 +38,7 @@ final class AnalyticsManager {
 
 // MARK: - CombineEvent
 public struct CombineEvent: AnalyticsEvent {
+	public private(set) var type: String
 	public var name: String
 	public var payload: [String: Any]
 }
@@ -79,10 +80,36 @@ extension AnalyticsManager: AnalyticsService {
 		}
 		
 		services.forEach {
-			var combinedPayload = userProperty
-			combinedPayload.merge(dict: event.payload)
-			let combinedEvent = CombineEvent(name: event.name, payload: combinedPayload)
-			$0.send(event: combinedEvent)
+			if $0.allowEvents.contains(event.type) {
+				let combineEvent = buildCombineEvent(event)
+				$0.send(event: combineEvent)
+			}
 		}
+	}
+	
+	/// Reset all data related to the user e.g user logout
+	func send(event: AnalyticsEvent, from viewController: ViewController) {
+		var services = [AnalyticsService]()
+		readWriteLock.read {
+			services = self.analyticsServices
+		}
+		
+		services.forEach {
+			if $0.allowEvents.isEmpty || $0.allowEvents.contains(event.type) {
+				let combineEvent = buildCombineEvent(event)
+				$0.send(event: combineEvent, from: viewController)
+			}
+		}
+	}
+	
+	/// Combine event form share event with the current event
+	private func buildCombineEvent(_ event: AnalyticsEvent) -> CombineEvent {
+		var combinedPayload = userProperty
+		combinedPayload.merge(dict: event.payload)
+		return CombineEvent(
+			type: event.type,
+			name: event.name,
+			payload: combinedPayload
+		)
 	}
 }

@@ -6,7 +6,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/DLAnalytics.svg?style=flat)](http://cocoapods.org/pods/DLAnalytics)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
-An abstract Analytics Framework supports:
+Abstract Analytics Framework supports:
 
 - Unify Analytics.
 - Modularize, Centralize Analytics.
@@ -26,17 +26,26 @@ An abstract Analytics Framework supports:
 
 ```
 class ClientAnalyticsImpl: AnalyticsService {
+    // Specify whitelist events. Accept all events by default
+    var allowEvents: Set<String> {
+		Set<String>(arrayLiteral: "\(InputOTPEvent.self)", "\(CheckoutEvent.self)")
+	}
+
     func setUserIdentifyProperty(_ property: [String : String]) {
-		print("setUserIdentifyProperty: To support identify the user")
+		// To support identify the user"
 	}
 	
 	func reset() {
-		print("reset: To reset all data related to the user e.g user logout")
+		// reset all data related to the user e.g user logout"
 	}
 	
 	func send(event: AnalyticsEvent) {
-        // Here is the specific Analytics implementation e.g FireBaseAnalytics, MixPanel, etc.
+        // Specific Analytics implementation e.g FireBaseAnalytics, MixPanel, etc.
 		print("### Send an event name: \(event.name), payload = \(event.payload)")
+	}
+
+    func send(event: AnalyticsEvent, from viewController: DLAnalytics.ViewController) {
+		print("### Send an event name:  \(event.name), controller = \(ViewController.self)" )
 	}
 }
 ```
@@ -85,11 +94,11 @@ Analytics.registerAnalyticsService(analyticsService)
 ```
 /// Simulate tracking event InputOTP success
 Analytics.send(event: InputOTPEvent.inputOTPSuccess())
-Analytics.send(event: CheckoutEvent.success)
+Analytics.send(event: CheckoutEvent.success, from viewController: checkoutVC)
 
 /// Output:
 Send an event name: InputOTP, payload = ["OTPValid": "1"]
-Send an event name: Checkout_Success, payload = [:]
+Send an event name: Checkout_Success, controller = CheckoutViewController
 ```
 
 ## Installation

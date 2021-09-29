@@ -9,6 +9,11 @@
 import Foundation
 
 public protocol AnalyticsEvent {
+	var type: String { get }
     var name: String { get }
     var payload: [String: Any] { get }
+}
+
+public extension AnalyticsEvent {
+	var type: String { "\(Self.self)" }
 }
